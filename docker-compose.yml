@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://tasklife_user:c5m33k5lryh8JwrRbfYWJhFy6mSic98v@dpg-d7sps3bbc2fs73d0asug-a.oregon-postgres.render.com/tasklife
+    volumes:
+      - .:/app
